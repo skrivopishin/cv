@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сергей Кривопишин — DevOps-инженер</title>
+<meta name="description" content="Lead DevOps Engineer, больше 20 лет в IT: Kubernetes-платформы, AWS и Azure, Terraform, GitOps, наблюдаемость и инфраструктура для AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="alternate" hreflang="en" href="https://cv.krivopishin.by/">
+<link rel="alternate" hreflang="ru" href="https://cv.krivopishin.by/ru/">
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+
+<header class="hero">
+  <nav class="lang-switch" aria-label="Язык"><a href="../" hreflang="en" lang="en">English</a></nav>
+  <div class="wrap hero-top">
+    <div>
+      <p class="kicker">Lead DevOps Engineer</p>
+      <h1>Сергей Кривопишин</h1>
+      <p class="lede">Двадцать пять лет строю фундамент, на котором другие выпускают продукты: от серверных и Active Directory до Kubernetes-платформ на несколько аккаунтов, GitOps и инфраструктуры для AI.</p>
+    </div>
+    <img class="photo" src="../assets/photo.jpg" width="560" height="560" alt="Сергей Кривопишин">
+  </div>
+
+  <figure class="strata wrap-wide" aria-labelledby="strata-caption">
+    <div class="chart">
+    <div class="gridlines" aria-hidden="true">
+      <span style="--at:2001"></span>
+      <span style="--at:2008"></span>
+      <span style="--at:2012"></span>
+      <span style="--at:2018"></span>
+      <span style="--at:2023"></span>
+      <span style="--at:2026"></span>
+    </div>
+    <div class="strata-rows">
+      <div class="layer l5" style="--from:2023">
+        <span class="layer-name">GitOps и платформенная инженерия <em>ArgoCD, FluxCD, Crossplane, AI-инфраструктура</em></span>
+        <span class="layer-since">2023 – сейчас <small>3 года</small></span>
+      </div>
+      <div class="layer l4" style="--from:2018">
+        <span class="layer-name">Облака и контейнеры <em>Azure, AWS, Docker, Kubernetes, Helm</em></span>
+        <span class="layer-since">2018 – сейчас <small>8 лет</small></span>
+      </div>
+      <div class="layer l3" style="--from:2012">
+        <span class="layer-name">Автоматизация поставки <em>Git, Chef, TeamCity, Terraform</em></span>
+        <span class="layer-since">2012 – сейчас <small>14 лет</small></span>
+      </div>
+      <div class="layer l2" style="--from:2008">
+        <span class="layer-name">Виртуализация и скрипты <em>Hyper-V, VMware vSphere, PowerShell, Bash</em></span>
+        <span class="layer-since">2008 – сейчас <small>18 лет</small></span>
+      </div>
+      <div class="layer l1" style="--from:2001">
+        <span class="layer-name">Системы и сети <em>Windows Server, Active Directory, Exchange, FreeBSD</em></span>
+        <span class="layer-since">2001 – сейчас <small>25 лет</small></span>
+      </div>
+    </div>
+    <div class="axis" aria-hidden="true">
+      <span style="--at:2001">2001</span>
+      <span style="--at:2008">2008</span>
+      <span style="--at:2012">2012</span>
+      <span style="--at:2018">2018</span>
+      <span style="--at:2023">2023</span>
+      <span style="--at:2026">сейчас</span>
+    </div>
+    </div>
+    <figcaption id="strata-caption">Полоса закрашена с года, когда я начал работать в этой области, и до сегодняшнего дня. Слои накладываются друг на друга: старые навыки по-прежнему в ежедневной работе.</figcaption>
+  </figure>
+</header>
+
+<main id="main">
+
+<section class="wrap" aria-labelledby="now">
+  <h2 id="now">Чем занимаюсь сейчас</h2>
+
+  <article class="role">
+    <div class="role-head">
+      <h3>Финтех — P2P-платформа инвестиций и кредитования</h3>
+      <p class="role-meta">Lead DevSecOps Engineer, SoftTeco <span class="dates">ноябрь 2023 – сейчас</span></p>
+    </div>
+    <p>Отвечаю за инфраструктуру регулируемой финтех-платформы: три AWS-аккаунта, три EKS-кластера, всё описано в Terraform и доставляется через GitOps. Руковожу небольшой DevOps-командой и каждый день работаю с продуктовыми разработчиками.</p>
+
+    <div class="groups">
+      <div class="group">
+        <h4>Платформа</h4>
+        <ul>
+          <li>Построил и сопровождаю EKS-кластеры для stage, production и общего аккаунта инструментов, обновляю их вплоть до версии 1.34.</li>
+          <li>Автомасштабирование на Karpenter со spot- и выделенными пулами нод; KEDA для событийных нагрузок.</li>
+          <li>Заменил ingress-nginx на Gateway API с Istio и Envoy, затем полностью вывел nginx из работы.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Инфраструктура как код</h4>
+        <ul>
+          <li>Внедрил Crossplane в дополнение к Terraform: Terraform для фундамента, Crossplane Compositions для ресурсов, которые живут вместе с приложением.</li>
+          <li>Отрефакторил все Terraform-модули под современные задачи в библиотеку примерно из 55 модулей с релизами по тегам: EKS, RDS, DMS, сети, Cognito, SSO, Lambda и другие.</li>
+          <li>13 собственных Helm-чартов, публикуются как OCI-артефакты через semantic-release.</li>
+          <li>Секреты как код: манифесты по окружениям в AWS Secrets Manager и KMS, синхронизация через External Secrets Operator.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>CI/CD</h4>
+        <ul>
+          <li>Перевёл компанию с GitLab на GitHub: все репозитории и пайплайны.</li>
+          <li>Self-hosted раннеры GitHub Actions в Kubernetes (ARC) плюс автомасштабируемый парк EC2.</li>
+          <li>Библиотека из 23 переиспользуемых composite actions: сборки Nx affected, матрицы деплоя, релизы образов, кеширование, e2e-отчёты.</li>
+          <li>Сканирование безопасности, ревью по CODEOWNERS и AI-ревью pull request'ов в CI.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Самообслуживание для разработчиков</h4>
+        <ul>
+          <li>Сделал автоматизацию, с которой разработчики сами выполняют большинство операций без DevOps: создают новое приложение, поднимают окружение, выпускают релиз, добавляют IP в allowlist, запускают базу.</li>
+          <li>Preview-окружения по запросу через Crossplane Compositions и ArgoCD ApplicationSets.</li>
+          <li>Заменил документ в Google Docs на портал документации, который пишется в git и публикуется автоматически.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Наблюдаемость</h4>
+        <ul>
+          <li>Перешёл с Prometheus, Thanos, Loki и Grafana на SigNoz с автоинструментированием OpenTelemetry.</li>
+          <li>Алерты и дашборды описаны в Terraform.</li>
+          <li>Ежедневный отчёт о здоровье production, который генерирует LLM на Bedrock через MCP-сервер поверх телеметрии.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Данные и безопасность</h4>
+        <ul>
+          <li>Перенёс основную базу с MS SQL на PostgreSQL через AWS DMS.</li>
+          <li>Партиционирование таблиц на pg_partman и pg_cron с архивированием в S3.</li>
+          <li>Dual-stack VPC с IPv6, Transit Gateway и site-to-site VPN, WAF allowlist, реакция на вредоносные файлы через GuardDuty, CloudTrail и flow logs.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>AI-инфраструктура</h4>
+        <ul>
+          <li>Строю внутреннюю платформу для агентов: шлюз LiteLLM к Bedrock, Hatchet, изолированные раннеры в Kubernetes для coding-агентов.</li>
+          <li>Развернул корпоративный AI-поиск по знаниям компании.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tools"><span>Стек</span> AWS, EKS, Terraform, Crossplane, ArgoCD, Argo Workflows, Helm, Istio, Karpenter, GitHub Actions, PostgreSQL, SigNoz, OpenTelemetry, LiteLLM</p>
+  </article>
+
+  <article class="role">
+    <div class="role-head">
+      <h3>E-commerce — платформа печати по запросу</h3>
+      <p class="role-meta">DevOps Engineer, SoftTeco <span class="dates">октябрь 2025 – сейчас</span></p>
+    </div>
+    <p>Коммерческая платформа печати по запросу: около 16 бэкенд-сервисов и 3 фронтенда, два бренда в двух облаках — AWS и Yandex Cloud. Построил инфраструктуру и доставку с нуля, сейчас веду нефункциональные требования, change request'ы и поддержку по запросу.</p>
+
+    <div class="groups">
+      <div class="group">
+        <h4>Инфраструктура</h4>
+        <ul>
+          <li>Terraform для обоих облаков: VPC, EKS и Yandex Managed Kubernetes, RDS, ECR и Container Registry, S3, KMS, Route53, CloudFront, Lambda.</li>
+          <li>Четыре окружения в AWS, включая изолированное тестовое со своей сетью и базой, плюс отдельное окружение для нагрузочных тестов.</li>
+          <li>Выделил редактор мокапов в отдельный продукт со своей инфраструктурой.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Доставка</h4>
+        <ul>
+          <li>GitOps на FluxCD и собственных Helm-чартах; аддоны кластера и приложения из общей базы с оверлеями по окружениям.</li>
+          <li>Bitbucket Pipelines с OIDC в облако, автоматический plan и apply после подтверждения, self-hosted раннеры.</li>
+          <li>Режимы с уменьшенным масштабом для непродуктовых окружений, чтобы снизить затраты.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Наблюдаемость</h4>
+        <ul>
+          <li>Метрики, логи и трейсы на Prometheus, VictoriaLogs, VictoriaTraces и OpenTelemetry Collector, дашборды Grafana и правила алертов как код.</li>
+          <li>Нагрузочное тестирование через k6-operator.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Безопасность</h4>
+        <ul>
+          <li>Секреты как код на External Secrets и KMS с репликацией между регионами; в CI нет долгоживущих облачных ключей.</li>
+          <li>cert-manager, external-dns и Reloader: сертификаты, DNS и выкатка конфигурации без ручной работы.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tools"><span>Стек</span> AWS, Yandex Cloud, Terraform, Kubernetes, FluxCD, Helm, Bitbucket Pipelines, KEDA, RabbitMQ, Redis, MongoDB, PostgreSQL, стек VictoriaMetrics, OpenTelemetry, k6</p>
+  </article>
+</section>
+
+<section class="wrap" aria-labelledby="skills">
+  <h2 id="skills">Навыки</h2>
+  <p class="section-note">Длина полосы — годы практической работы, шкала до 25 лет.</p>
+
+  <div class="skill-groups">
+    <div class="skill-group">
+      <h3>Системы</h3>
+      <dl class="bars">
+        <div style="--y:25"><dt>Windows Server</dt><dd>25 лет</dd></div>
+        <div style="--y:6"><dt>VMware / Hyper-V</dt><dd>6 лет</dd></div>
+      </dl>
+      <p class="also">Также: Ubuntu, CentOS, RHEL, Amazon Linux, FreeBSD, Active Directory, Exchange, SCVMM, WDS</p>
+    </div>
+    <div class="skill-group">
+      <h3>Облака</h3>
+      <dl class="bars">
+        <div style="--y:8"><dt>Azure</dt><dd>8 лет</dd></div>
+        <div style="--y:7"><dt>AWS</dt><dd>7 лет</dd></div>
+        <div style="--y:2"><dt>Google Cloud</dt><dd>2 года</dd></div>
+        <div style="--y:1"><dt>Yandex Cloud</dt><dd>1 год</dd></div>
+      </dl>
+      <p class="also">Также: шаблоны ARM, CloudFormation, AWS SSM, Azure Functions, Azure Automation</p>
+    </div>
+    <div class="skill-group">
+      <h3>Инфраструктура и доставка</h3>
+      <dl class="bars">
+        <div style="--y:12"><dt>Terraform</dt><dd>12 лет</dd></div>
+        <div style="--y:9"><dt>Azure Pipelines</dt><dd>9 лет</dd></div>
+        <div style="--y:8"><dt>Helm</dt><dd>8 лет</dd></div>
+        <div style="--y:7"><dt>Kubernetes</dt><dd>7 лет</dd></div>
+        <div style="--y:7"><dt>Docker</dt><dd>7 лет</dd></div>
+        <div style="--y:6"><dt>GitHub Actions</dt><dd>6 лет</dd></div>
+        <div style="--y:4"><dt>GitLab CI</dt><dd>4 года</dd></div>
+        <div style="--y:4"><dt>TeamCity</dt><dd>4 года</dd></div>
+        <div style="--y:4"><dt>Ansible</dt><dd>4 года</dd></div>
+        <div style="--y:3"><dt>ArgoCD</dt><dd>3 года</dd></div>
+        <div style="--y:3"><dt>FluxCD</dt><dd>3 года</dd></div>
+        <div style="--y:3"><dt>Crossplane</dt><dd>3 года</dd></div>
+        <div style="--y:3"><dt>Karpenter</dt><dd>3 года</dd></div>
+        <div style="--y:2"><dt>Chef</dt><dd>2 года</dd></div>
+      </dl>
+      <p class="also">Также: Istio, KEDA, Kustomize, Packer, Octopus Deploy, Jenkins, AWX</p>
+    </div>
+    <div class="skill-group">
+      <h3>Языки</h3>
+      <dl class="bars">
+        <div style="--y:18"><dt>PowerShell</dt><dd>18 лет</dd></div>
+        <div style="--y:18"><dt>Bash</dt><dd>18 лет</dd></div>
+        <div style="--y:8"><dt>Python</dt><dd>8 лет</dd></div>
+      </dl>
+      <p class="also">Также: T-SQL, C#, Ruby, Go, JavaScript</p>
+    </div>
+    <div class="skill-group">
+      <h3>Базы данных</h3>
+      <dl class="bars">
+        <div style="--y:20"><dt>MS SQL Server</dt><dd>20 лет</dd></div>
+        <div style="--y:5"><dt>PostgreSQL</dt><dd>5 лет</dd></div>
+        <div style="--y:4"><dt>MySQL</dt><dd>4 года</dd></div>
+        <div style="--y:4"><dt>Redis</dt><dd>4 года</dd></div>
+        <div style="--y:1"><dt>ClickHouse</dt><dd>1 год</dd></div>
+      </dl>
+      <p class="also">Также: Oracle, MongoDB, Solr, Elasticsearch, RabbitMQ</p>
+    </div>
+    <div class="skill-group">
+      <h3>Наблюдаемость</h3>
+      <dl class="bars">
+        <div style="--y:6"><dt>Prometheus</dt><dd>6 лет</dd></div>
+        <div style="--y:6"><dt>Grafana</dt><dd>6 лет</dd></div>
+        <div style="--y:6"><dt>Nginx</dt><dd>6 лет</dd></div>
+        <div style="--y:3"><dt>Loki / Thanos</dt><dd>3 года</dd></div>
+        <div style="--y:1"><dt>SigNoz / OpenTelemetry</dt><dd>1 год</dd></div>
+        <div style="--y:1"><dt>Стек VictoriaMetrics</dt><dd>1 год</dd></div>
+      </dl>
+      <p class="also">Также: Application Insights, ELK, Zabbix, Alertmanager</p>
+    </div>
+    <div class="skill-group">
+      <h3>Совместная работа</h3>
+      <dl class="bars">
+        <div style="--y:13"><dt>Git и GitHub</dt><dd>13 лет</dd></div>
+        <div style="--y:13"><dt>Jira</dt><dd>13 лет</dd></div>
+        <div style="--y:6"><dt>Azure DevOps</dt><dd>6 лет</dd></div>
+        <div style="--y:1"><dt>Bitbucket</dt><dd>1 год</dd></div>
+      </dl>
+      <p class="also">Также: SVN, TFS, Azure Boards</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="experience">
+  <h2 id="experience">Прошлые проекты</h2>
+  <p class="section-note">Консалтинг и проектная работа, от новых к старым. Откройте проект, чтобы увидеть, за что я отвечал.</p>
+
+  <ol class="history">
+    <li>
+      <details>
+        <summary><span class="h-dates">2026</span><span class="h-title">Нагрузочное тестирование продукта безопасности для Windows</span><span class="h-role">DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Построил окружение для нагрузочного тестирования продукта безопасности под Windows, который на лету анализирует и подписывает документы, когда пользователь их открывает.</p>
+          <ul>
+            <li>Хосты Windows Server на EC2 с доступом через SSM и RDP.</li>
+            <li>HAProxy и nginx на входе, Prometheus и Grafana для метрик, вспомогательные сервисы в Docker Compose.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> AWS, EC2 Windows Server, SSM, HAProxy, nginx, Prometheus, Grafana, Docker Compose</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2025 – 2026</span><span class="h-title">AI-анализ угроз от поставщиков и управление алертами</span><span class="h-role">DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Kubernetes-приложение на основе AI, которое собирает и анализирует инциденты безопасности у поставщиков.</p>
+          <ul>
+            <li>Построил и поставил инфраструктуру в Azure как код.</li>
+            <li>Отвечал за сборку, релиз и деплой приложений.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> Azure, Azure Pipelines, Terraform, Helm, Docker, FluxCD</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2025</span><span class="h-title">Консультации по деплою</span><span class="h-role">Консультант, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Консультировал команду клиента о том, как разворачивать и эксплуатировать их приложение.</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2024 – 2025</span><span class="h-title">Миграция AKS и аудит безопасности</span><span class="h-role">Архитектор, DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Обследование, архитектура и план переноса production-кластера AKS и его реестра в новую подписку Azure.</p>
+          <ul>
+            <li>Спроектировал целевую схему и пошаговое переключение: service principal'ы, перенос образов, секреты CI, переключение DNS.</li>
+            <li>Аудит безопасности и надёжности с приоритетами исправлений: секреты из git в Key Vault, всё как код, HA для Redis и RabbitMQ, requests и limits, spot-ноды для dev.</li>
+            <li>Предложил Helm и GitOps для доставки приложений и оценил весь объём работ.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> Azure, AKS, ACR, Key Vault, Helm, Prometheus, Grafana, ingress-nginx, cert-manager</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023 – 2026</span><span class="h-title">Спорт — приложение для сообщества прыгунов в воду</span><span class="h-role">Консультант, Lead DevOps, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Социальная и соревновательная платформа для спортсменов, родителей, судей и тренеров, веб и мобильная версия.</p>
+          <ul>
+            <li>Руководил DevOps-инженерами и принимал инфраструктурные решения по масштабируемости, безопасности и стоимости.</li>
+            <li>Работал с разработчиками над архитектурой приложения.</li>
+            <li>Разбирал инциденты в production, выстроил практики деплоя и мониторинга.</li>
+            <li>В 2025–2026 годах продолжал поддержку.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> GCP, GitHub, Kubernetes, Terraform, PostgreSQL</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023 – 2026</span><span class="h-title">Пресейл: архитектура и оценки</span><span class="h-role">Архитектор, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Готовил ответы на запросы клиентов: проекты инфраструктуры, планы CI/CD и оценки стоимости.</p>
+          <ul>
+            <li>AI-продукт с NLP и распознаванием видео и аудио: инфраструктура, CI/CD и стоимость MVP.</li>
+            <li>Умное зеркало для виртуальной примерки одежды: архитектура софта и оборудования на базе GPU и нейросетей.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> Azure, AWS, Kubernetes, GitHub Actions</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023 – 2026</span><span class="h-title">Travel tech — .NET-приложения в Azure</span><span class="h-role">Консультант, DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Наладил, а затем поддерживал доставку .NET-приложений тревел-компании в Azure для двух её продуктов.</p>
+          <ul>
+            <li>Провёл аудит и починил пайплайны CI/CD, спланировал следующие улучшения.</li>
+            <li>Настроил и сопровождал Web Apps и Azure SQL с автоматическим обновлением сертификатов.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> Azure Web Apps, Azure SQL, .NET, MSBuild, Jenkins, GitHub</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023 – 2024</span><span class="h-title">Enterprise — защищённая микросервисная платформа в Azure</span><span class="h-role">Lead DevSecOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Срочная сборка окружений dev, test, pre-prod и prod в Azure с приоритетом безопасности и минимальными правами доступа.</p>
+          <ul>
+            <li>Полностью отрефакторил Terraform, построил пайплайны Azure DevOps и Dockerfile'ы.</li>
+            <li>Приватный AKS-кластер в сети hub-and-spoke с доступом, ограниченным по портам и IP.</li>
+            <li>Спроектировал взаимодействие сервисов и составил communication matrix.</li>
+            <li>Получал все доступы через security-команду заказчика; задокументировал архитектуру и реализацию.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> Azure, AKS, Azure DevOps, Terraform, Docker, Helm, Python</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023</span><span class="h-title">Банк — AI-анализ документов</span><span class="h-role">DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Инфраструктура для AI-инструмента, который автоматически анализирует банковские документы.</p>
+          <ul>
+            <li>Terraform для облачных ресурсов, пайплайны Azure DevOps, Helm-чарты.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> Azure, Azure DevOps, Terraform, GitHub Actions, Kubernetes</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2022</span><span class="h-title">The Real Deal — редизайн новостного портала о недвижимости</span><span class="h-role">Lead DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>Американский мультирегиональный новостной портал о недвижимости, пересобранный с нуля. В команде четыре разработчика, архитектор и я как единственный DevOps-инженер.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Архитектура</h4>
+              <ul>
+                <li>Был архитектором решения для новой платформы.</li>
+                <li>Спроектировал защищённую инфраструктуру в AWS и план аварийного восстановления с предварительной оценкой.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Доставка</h4>
+              <ul>
+                <li>Инфраструктура как код на Terraform с деплоем в EKS.</li>
+                <li>CI/CD микросервисов на Docker, Helm и GitHub Actions; стратегия ветвления и версионирования.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Команда</h4>
+              <ul>
+                <li>Консультировал разработчиков по вопросам производительности и безопасности.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Стек</span> AWS, EKS, Terraform, Helm, Docker, GitHub Actions, Bash, WordPress</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2019 – 2022</span><span class="h-title">Wolters Kluwer — облачные ресурсы в масштабе enterprise</span><span class="h-role">Lead DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>DevOps-практика из 10–20 инженеров, которая обслуживала внутренние подразделения крупной компании с множеством подписок Azure и аккаунтов AWS.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Платформа</h4>
+              <ul>
+                <li>Построил и поддерживал сервис container-as-a-service для внутренних заказчиков.</li>
+                <li>Отрефакторил пайплайн CI/CD для перехода на новейшую версию Windows Server.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Конфигурация и hardening</h4>
+              <ul>
+                <li>Сервис настройки и проверки виртуальных машин Azure и инстансов EC2 на Ansible и AWX, через агент Azure и AWS SSM, с собственными плагинами Ansible на Python.</li>
+                <li>Автоматизация CIS hardening для всего парка машин.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Инструменты</h4>
+              <ul>
+                <li>Спроектировал и сопровождал систему инвентаризации облаков на Azure Automation и Azure Functions.</li>
+                <li>Спроектировал миграцию с Azure AD SSO на AWS SAML 2.0 SSO.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Лидерство</h4>
+              <ul>
+                <li>Руководил командами из 2–4 инженеров как scrum-мастер и координатор.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Стек</span> Azure DevOps, Terraform, ARM, CloudFormation, Kubernetes, Ansible, AWX, AWS SSM, Python, PowerShell, Bash, Azure Automation, Azure Functions, Logic Apps</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2021</span><span class="h-title">Instructure — образовательная платформа, из Azure в AWS</span><span class="h-role">Senior DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>Образовательная платформа для школ и университетов, которую нужно было перенести из Azure в AWS.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Миграция</h4>
+              <ul>
+                <li>Разработал стратегию миграции ASP.NET-приложений.</li>
+                <li>Перенёс приложения из Azure Web Apps в AWS Lightsail.</li>
+                <li>Перенёс базу из Azure SQL в Amazon RDS через AWS DMS.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Стек</span> Azure, AWS, Lightsail, RDS, DMS, MS SQL, Docker</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2020 – 2021</span><span class="h-title">Verint — платформа управления обратной связью</span><span class="h-role">DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>Платформа управления обратной связью, у которой устаревшие компоненты постоянно не устанавливались.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Автоматизация</h4>
+              <ul>
+                <li>Автоматизировал пайплайн CI/CD и настройку устаревшего софта.</li>
+                <li>Перевёл развёртывание приложения со скриптов PowerShell на Ansible.</li>
+                <li>Нашёл первопричины давних сбоев установки.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Команда</h4>
+              <ul>
+                <li>Помогал команде разработки в ежедневной работе.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Стек</span> Octopus Deploy, Ansible, PowerShell, GitLab</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2019</span><span class="h-title">Exadel — калькулятор затрат AWS</span><span class="h-role">Lead DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>Внутренний проект Exadel: автоматический расчёт затрат на AWS.</p>
+          <p class="tools"><span>Стек</span> AWS, PowerShell</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2019</span><span class="h-title">Deloitte — Tax Tips</span><span class="h-role">CI/CD and Support Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>Внутреннее приложение для налоговых расчётов, в котором нужно было обновить доставку микросервисов.</p>
+          <ul>
+            <li>Отрефакторил деплой на Docker.</li>
+            <li>Автоматизировал обновление work item'ов в Azure DevOps.</li>
+            <li>Запуск и остановка виртуальных машин по расписанию, группам ресурсов и тегам для экономии.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> Azure DevOps, Azure IaaS, Docker, PowerShell</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2015 – 2018</span><span class="h-title">Luxottica — управление цифровыми активами</span><span class="h-role">Support Team Lead, Technical Architect, EPAM</span></summary>
+        <div class="h-body">
+          <p>Content Lab и DAM компании Luxottica на ADAM Software. Вырос от координатора команды поддержки из четырёх человек до лида направления и технического архитектора.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Процессы</h4>
+              <ul>
+                <li>Выстроил процесс поддержки с нуля по практикам ITIL.</li>
+                <li>Отчётность и прозрачность в Jira для заказчика и команды, регулярные встречи с заказчиком.</li>
+                <li>Разбор бэклога и онбординг новичков.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Разработка</h4>
+              <ul>
+                <li>Проектирование решений как технический эксперт направления.</li>
+                <li>Улучшения CI/CD и деплоя, изменения инфраструктуры, исправление багов.</li>
+                <li>Разработал PowerShell-модуль для ADAM.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Поддержка</h4>
+              <ul>
+                <li>Поддержка заказчика и внутренних команд, поиск первопричин проблем.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Стек</span> MS SQL, Solr, Elasticsearch, TeamCity, PowerShell, Visual Studio, MSBuild, MSDeploy, Sonar, Application Insights, Azure IaaS, .NET</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2015</span><span class="h-title">McKesson — автоматизация деплоя DAM</span><span class="h-role">Инженер, EPAM</span></summary>
+        <div class="h-body">
+          <p>Система управления цифровыми активами на ADAM Software.</p>
+          <ul>
+            <li>Автоматизировал весь деплой продукта с нуля.</li>
+            <li>Деплой в одно нажатие, который обновляет тикеты и версии в Jira и рассылает release notes.</li>
+            <li>Автоматический откат.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> TeamCity, PowerShell, DSC, Web Deploy, Jira API, MS SQL 2012</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2008 – 2014</span><span class="h-title">Invention Machine, позже IHS — IT для R&amp;D-офиса</span><span class="h-role">Ведущий инженер, системный администратор</span></summary>
+        <div class="h-body">
+          <p>Начинал единственным администратором офиса на 60 разработчиков и тестировщиков, где около 50 серверов были собранными вручную десктопами. После покупки компании IHS руководил со стороны Минска переводом офиса, к тому времени уже на 100 человек, в IHS вместе с командой сетевых инженеров, инженеров поддержки и телефонии.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Инфраструктура</h4>
+              <ul>
+                <li>Обновил контроллеры домена на Windows 2000 и Exchange 2000 до 2007.</li>
+                <li>RIS и WDS для установки ОС; централизованный антивирус Forefront вместо NOD32.</li>
+                <li>Построил новую серверную с blade-шасси и хранилищем 3PAR.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Поглощение</h4>
+              <ul>
+                <li>Перевёл офис в домен IHS: учётные записи, доверительные отношения, серверы, рабочие станции, профили и данные пользователей.</li>
+                <li>Отвечал за проектирование и закупку оборудования и обсуждение рисков для минского офиса.</li>
+                <li>Подключил цифровую телефонию и переговорные; провёл аудит сети расширенного офиса и участвовал в выборе подрядчика.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Виртуализация</h4>
+              <ul>
+                <li>Перешёл с VMware Workstation на Hyper-V с SCVMM 2008.</li>
+                <li>Позже перенёс почти все виртуальные машины на vSphere; установил и сопровождал vCenter, наладил подключение хранилища к ESXi, настроил PowerChute Network Shutdown.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Сеть</h4>
+              <ul>
+                <li>Сопровождал IPsec-канал site-to-site в американский офис: Cisco ASA с одной стороны, FreeBSD с другой.</li>
+                <li>Удалённый доступ через RRAS VPN, позже Remote Desktop Gateway; запустил новый оптический канал из Великобритании.</li>
+                <li>Мониторинг на munin, mrtg и softflowd; пересобрал сеть серверной при переезде офиса.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Инструменты QA</h4>
+              <ul>
+                <li>Переписал веб-интерфейс тестового фреймворка QA: главная страница открывается за 1–2 секунды вместо минут или таймаута.</li>
+                <li>Сократил формирование ежедневного отчёта с 40 минут – 4 часов до 5–8 минут на 20 000 тестов.</li>
+                <li>Готовил окружения для разработки и тестирования, включая PTC Windchill, EMC Documentum и Oracle.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Доставка</h4>
+              <ul>
+                <li>Внедрил Chef для деплоя продукта на production-площадку, написал cookbook для индексного узла.</li>
+                <li>Сделал веб-портал для системы контроля доступа на Web API 2 и AngularJS.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Стек</span> Windows Server 2000–2012, AD, Exchange, WSUS, WDS, GPO, SharePoint, Hyper-V, SCVMM, vSphere, ESXi, 3PAR, FreeBSD, Chef, Ruby, C#, AngularJS, MS SQL, Oracle 10g, Paradox, PowerShell</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2008</span><span class="h-title">AlliedTesting — инфраструктура для QA</span><span class="h-role">Системный администратор</span></summary>
+        <div class="h-body">
+          <p>Один из двух администраторов в офисе тестирования на 60 человек.</p>
+          <ul>
+            <li>Чистая переустановка ОС для тестировщиков и регулярный аудит софта.</li>
+            <li>Автоматизировал установку через RIS, затем обновил до WDS с обратной совместимостью.</li>
+            <li>Предложил и начал переход на виртуализацию.</li>
+          </ul>
+          <p class="tools"><span>Стек</span> Windows Server 2003, RIS, WDS</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2001 – 2008</span><span class="h-title">РНПЦ онкологии и медицинской радиологии им. Н.Н. Александрова</span><span class="h-role">Ведущий инженер, системный администратор</span></summary>
+        <div class="h-body">
+          <p>Начинал техником и вырастил IT центра с одного сервера и 20 ПК до 4 серверов и около 200 ПК.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Инфраструктура</h4>
+              <ul>
+                <li>Заменил одноранговую сеть на Active Directory, DNS и DHCP.</li>
+                <li>Exchange в качестве почтового сервера; прокси Squid с аутентификацией через AD и шейпингом трафика.</li>
+                <li>Спланировал и проложил расширение сети.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Медицинские изображения</h4>
+              <ul>
+                <li>В команде создал систему, которая хранит рентгеновские снимки со всех аппаратов и отдаёт их на ПК любого врача.</li>
+                <li>Нашёл и адаптировал open-source DICOM-сервер, написал для него интерфейс управления.</li>
+                <li>Экономия для центра около $250 000 в год; врачи видят все снимки пациента, а не только несколько распечатанных.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Мероприятия</h4>
+              <ul>
+                <li>Отвечал за техническую часть медицинских конференций, включая III съезд онкологов СНГ.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Стек</span> Windows 2000 Server, AD, DNS, DHCP, Exchange 2000, FreeBSD, Squid, Apache, MS SQL 2000, C#</p>
+        </div>
+      </details>
+    </li>
+  </ol>
+</section>
+
+</main>
+
+<footer class="wrap" aria-labelledby="contact">
+  <h2 id="contact">Связаться</h2>
+  <ul class="contacts">
+    <li><a href="mailto:sergey@krivopishin.by">sergey@krivopishin.by</a></li>
+    <li><a href="tel:+375257408543">+375 25 740-85-43</a></li>
+    <li><a href="https://t.me/skrivopishin">Telegram</a></li>
+    <li><a href="https://www.linkedin.com/in/sergey-krivopishin/">LinkedIn</a></li>
+    <li><a href="https://github.com/skrivopishin">GitHub</a></li>
+  </ul>
+  <p class="langs">Английский — свободный профессиональный. Немецкий — базовый рабочий.</p>
+  <p class="langs">Бакалавр, Белорусский государственный университет информатики и радиоэлектроники.</p>
+</footer>
+</body>
+</html>

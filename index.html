@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sergey Krivopishin — DevOps Engineer</title>
+<meta name="description" content="Lead DevOps Engineer with 20+ years in IT: Kubernetes platforms, AWS and Azure, Terraform, GitOps, observability and AI infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="alternate" hreflang="en" href="https://cv.krivopishin.by/">
+<link rel="alternate" hreflang="ru" href="https://cv.krivopishin.by/ru/">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero">
+  <nav class="lang-switch" aria-label="Language"><a href="ru/" hreflang="ru" lang="ru">Русский</a></nav>
+  <div class="wrap hero-top">
+    <div>
+      <p class="kicker">Lead DevOps Engineer</p>
+      <h1>Sergey Krivopishin</h1>
+      <p class="lede">Twenty-five years of building the ground other people ship on: from server rooms and Active Directory to multi-account Kubernetes platforms, GitOps and infrastructure for AI.</p>
+    </div>
+    <img class="photo" src="assets/photo.jpg" width="560" height="560" alt="Sergey Krivopishin">
+  </div>
+
+  <figure class="strata wrap-wide" aria-labelledby="strata-caption">
+    <div class="chart">
+    <div class="gridlines" aria-hidden="true">
+      <span style="--at:2001"></span>
+      <span style="--at:2008"></span>
+      <span style="--at:2012"></span>
+      <span style="--at:2018"></span>
+      <span style="--at:2023"></span>
+      <span style="--at:2026"></span>
+    </div>
+    <div class="strata-rows">
+      <div class="layer l5" style="--from:2023">
+        <span class="layer-name">GitOps &amp; platform engineering <em>ArgoCD, FluxCD, Crossplane, AI infrastructure</em></span>
+        <span class="layer-since">2023 – now <small>3 yrs</small></span>
+      </div>
+      <div class="layer l4" style="--from:2018">
+        <span class="layer-name">Cloud &amp; containers <em>Azure, AWS, Docker, Kubernetes, Helm</em></span>
+        <span class="layer-since">2018 – now <small>8 yrs</small></span>
+      </div>
+      <div class="layer l3" style="--from:2012">
+        <span class="layer-name">Delivery automation <em>Git, Chef, TeamCity, Terraform</em></span>
+        <span class="layer-since">2012 – now <small>14 yrs</small></span>
+      </div>
+      <div class="layer l2" style="--from:2008">
+        <span class="layer-name">Virtualization &amp; scripting <em>Hyper-V, VMware vSphere, PowerShell, Bash</em></span>
+        <span class="layer-since">2008 – now <small>18 yrs</small></span>
+      </div>
+      <div class="layer l1" style="--from:2001">
+        <span class="layer-name">Systems &amp; networks <em>Windows Server, Active Directory, Exchange, FreeBSD</em></span>
+        <span class="layer-since">2001 – now <small>25 yrs</small></span>
+      </div>
+    </div>
+    <div class="axis" aria-hidden="true">
+      <span style="--at:2001">2001</span>
+      <span style="--at:2008">2008</span>
+      <span style="--at:2012">2012</span>
+      <span style="--at:2018">2018</span>
+      <span style="--at:2023">2023</span>
+      <span style="--at:2026">now</span>
+    </div>
+    </div>
+    <figcaption id="strata-caption">Each bar is filled from the year I started working in that area up to today. The layers stack up: the older skills are still in daily use.</figcaption>
+  </figure>
+</header>
+
+<main id="main">
+
+<section class="wrap" aria-labelledby="now">
+  <h2 id="now">What I do now</h2>
+
+  <article class="role">
+    <div class="role-head">
+      <h3>Fintech — P2P investment and lending platform</h3>
+      <p class="role-meta">Lead DevSecOps Engineer, SoftTeco <span class="dates">Nov 2023 – present</span></p>
+    </div>
+    <p>I run the infrastructure of a regulated fintech platform: three AWS accounts, three EKS clusters, everything defined in Terraform and delivered through GitOps. I lead a small DevOps team and work day to day with the product engineers.</p>
+
+    <div class="groups">
+      <div class="group">
+        <h4>Platform</h4>
+        <ul>
+          <li>Built and operate EKS clusters for staging, production and a shared tools account, kept current through version upgrades up to 1.34.</li>
+          <li>Karpenter autoscaling with spot and dedicated node pools; KEDA for event-driven workloads.</li>
+          <li>Replaced ingress-nginx with Gateway API on Istio and Envoy, then retired nginx completely.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Infrastructure as code</h4>
+        <ul>
+          <li>Introduced Crossplane alongside Terraform: Terraform for the foundation, Crossplane Compositions for resources that live with the application.</li>
+          <li>Refactored all Terraform modules for today's needs into a library of about 55 modules released by tag: EKS, RDS, DMS, networking, Cognito, SSO, Lambda and more.</li>
+          <li>13 in-house Helm charts published as OCI artifacts with semantic-release.</li>
+          <li>Secrets as code: per-environment manifests to AWS Secrets Manager and KMS, synced by External Secrets Operator.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>CI/CD</h4>
+        <ul>
+          <li>Moved the company from GitLab to GitHub: every repository and pipeline.</li>
+          <li>Self-hosted GitHub Actions runners on Kubernetes (ARC) plus an autoscaled EC2 fleet.</li>
+          <li>A library of 23 reusable composite actions: Nx affected builds, deploy matrices, image releases, caching, e2e reports.</li>
+          <li>Security scanning, CODEOWNERS reviews and AI-assisted pull request review in CI.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Developer self-service</h4>
+        <ul>
+          <li>Built automation that lets developers do most operations on their own, without involving DevOps: create a new app, spin up an environment, release, allowlist an IP, start a database.</li>
+          <li>On-demand preview environments through Crossplane Compositions and ArgoCD ApplicationSets.</li>
+          <li>Replaced a Google Docs handbook with a documentation portal that is written in git and published automatically.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Observability</h4>
+        <ul>
+          <li>Moved from Prometheus, Thanos, Loki and Grafana to SigNoz with OpenTelemetry auto-instrumentation.</li>
+          <li>Alerts and dashboards managed as Terraform.</li>
+          <li>An LLM-generated daily production health report built on Bedrock and an MCP server over telemetry.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Data &amp; security</h4>
+        <ul>
+          <li>Migrated the core database from MS SQL to PostgreSQL with AWS DMS.</li>
+          <li>Table partitioning with pg_partman and pg_cron, archived to S3.</li>
+          <li>IPv6 dual-stack VPCs, Transit Gateway and site-to-site VPN, WAF allowlists, GuardDuty malware response, CloudTrail and flow logs.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>AI infrastructure</h4>
+        <ul>
+          <li>Building an internal agent platform: LiteLLM gateway to Bedrock, Hatchet, isolated Kubernetes runners for coding agents.</li>
+          <li>Deployed an enterprise AI search over company knowledge.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tools"><span>Stack</span> AWS, EKS, Terraform, Crossplane, ArgoCD, Argo Workflows, Helm, Istio, Karpenter, GitHub Actions, PostgreSQL, SigNoz, OpenTelemetry, LiteLLM</p>
+  </article>
+
+  <article class="role">
+    <div class="role-head">
+      <h3>E-commerce — print-on-demand platform</h3>
+      <p class="role-meta">DevOps Engineer, SoftTeco <span class="dates">Oct 2025 – present</span></p>
+    </div>
+    <p>A print-on-demand commerce platform with about 16 backend services and 3 frontends, running as two brands in two clouds: AWS and Yandex Cloud. I built the infrastructure and delivery from scratch and now carry non-functional requirements, change requests and on-demand support.</p>
+
+    <div class="groups">
+      <div class="group">
+        <h4>Infrastructure</h4>
+        <ul>
+          <li>Terraform for both clouds: VPC, EKS and Yandex Managed Kubernetes, RDS, ECR and Container Registry, S3, KMS, Route53, CloudFront, Lambda.</li>
+          <li>Four environments on AWS, including an isolated test environment with its own network and database, plus a dedicated performance environment.</li>
+          <li>Split the mockup editor into a separate product with its own infrastructure.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Delivery</h4>
+        <ul>
+          <li>GitOps with FluxCD and in-house Helm charts; cluster add-ons and apps from a shared base with per-environment overlays.</li>
+          <li>Bitbucket Pipelines with OIDC to the cloud, automatic plans and approved applies, self-hosted runners.</li>
+          <li>Scaled-down modes for non-production environments to cut cost.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Observability</h4>
+        <ul>
+          <li>Metrics, logs and traces with Prometheus, VictoriaLogs, VictoriaTraces and the OpenTelemetry Collector, with Grafana dashboards and alert rules as code.</li>
+          <li>Load testing with the k6 operator.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h4>Security</h4>
+        <ul>
+          <li>Secrets as code with External Secrets, KMS and cross-region replication; no long-lived cloud credentials in CI.</li>
+          <li>cert-manager, external-dns and Reloader for hands-off certificates, DNS and config rollouts.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tools"><span>Stack</span> AWS, Yandex Cloud, Terraform, Kubernetes, FluxCD, Helm, Bitbucket Pipelines, KEDA, RabbitMQ, Redis, MongoDB, PostgreSQL, VictoriaMetrics stack, OpenTelemetry, k6</p>
+  </article>
+</section>
+
+<section class="wrap" aria-labelledby="skills">
+  <h2 id="skills">Skills</h2>
+  <p class="section-note">Bar length is years of hands-on use, on a 25-year scale.</p>
+
+  <div class="skill-groups">
+    <div class="skill-group">
+      <h3>Systems</h3>
+      <dl class="bars">
+        <div style="--y:25"><dt>Windows Server</dt><dd>25 yrs</dd></div>
+        <div style="--y:6"><dt>VMware / Hyper-V</dt><dd>6 yrs</dd></div>
+      </dl>
+      <p class="also">Also: Ubuntu, CentOS, RHEL, Amazon Linux, FreeBSD, Active Directory, Exchange, SCVMM, WDS</p>
+    </div>
+    <div class="skill-group">
+      <h3>Cloud</h3>
+      <dl class="bars">
+        <div style="--y:8"><dt>Azure</dt><dd>8 yrs</dd></div>
+        <div style="--y:7"><dt>AWS</dt><dd>7 yrs</dd></div>
+        <div style="--y:2"><dt>Google Cloud</dt><dd>2 yrs</dd></div>
+        <div style="--y:1"><dt>Yandex Cloud</dt><dd>1 yr</dd></div>
+      </dl>
+      <p class="also">Also: ARM templates, CloudFormation, AWS SSM, Azure Functions, Azure Automation</p>
+    </div>
+    <div class="skill-group">
+      <h3>Infrastructure &amp; delivery</h3>
+      <dl class="bars">
+        <div style="--y:12"><dt>Terraform</dt><dd>12 yrs</dd></div>
+        <div style="--y:9"><dt>Azure Pipelines</dt><dd>9 yrs</dd></div>
+        <div style="--y:8"><dt>Helm</dt><dd>8 yrs</dd></div>
+        <div style="--y:7"><dt>Kubernetes</dt><dd>7 yrs</dd></div>
+        <div style="--y:7"><dt>Docker</dt><dd>7 yrs</dd></div>
+        <div style="--y:6"><dt>GitHub Actions</dt><dd>6 yrs</dd></div>
+        <div style="--y:4"><dt>GitLab CI</dt><dd>4 yrs</dd></div>
+        <div style="--y:4"><dt>TeamCity</dt><dd>4 yrs</dd></div>
+        <div style="--y:4"><dt>Ansible</dt><dd>4 yrs</dd></div>
+        <div style="--y:3"><dt>ArgoCD</dt><dd>3 yrs</dd></div>
+        <div style="--y:3"><dt>FluxCD</dt><dd>3 yrs</dd></div>
+        <div style="--y:3"><dt>Crossplane</dt><dd>3 yrs</dd></div>
+        <div style="--y:3"><dt>Karpenter</dt><dd>3 yrs</dd></div>
+        <div style="--y:2"><dt>Chef</dt><dd>2 yrs</dd></div>
+      </dl>
+      <p class="also">Also: Istio, KEDA, Kustomize, Packer, Octopus Deploy, Jenkins, AWX</p>
+    </div>
+    <div class="skill-group">
+      <h3>Languages</h3>
+      <dl class="bars">
+        <div style="--y:18"><dt>PowerShell</dt><dd>18 yrs</dd></div>
+        <div style="--y:18"><dt>Bash</dt><dd>18 yrs</dd></div>
+        <div style="--y:8"><dt>Python</dt><dd>8 yrs</dd></div>
+      </dl>
+      <p class="also">Also: T-SQL, C#, Ruby, Go, JavaScript</p>
+    </div>
+    <div class="skill-group">
+      <h3>Databases</h3>
+      <dl class="bars">
+        <div style="--y:20"><dt>MS SQL Server</dt><dd>20 yrs</dd></div>
+        <div style="--y:5"><dt>PostgreSQL</dt><dd>5 yrs</dd></div>
+        <div style="--y:4"><dt>MySQL</dt><dd>4 yrs</dd></div>
+        <div style="--y:4"><dt>Redis</dt><dd>4 yrs</dd></div>
+        <div style="--y:1"><dt>ClickHouse</dt><dd>1 yr</dd></div>
+      </dl>
+      <p class="also">Also: Oracle, MongoDB, Solr, Elasticsearch, RabbitMQ</p>
+    </div>
+    <div class="skill-group">
+      <h3>Observability</h3>
+      <dl class="bars">
+        <div style="--y:6"><dt>Prometheus</dt><dd>6 yrs</dd></div>
+        <div style="--y:6"><dt>Grafana</dt><dd>6 yrs</dd></div>
+        <div style="--y:6"><dt>Nginx</dt><dd>6 yrs</dd></div>
+        <div style="--y:3"><dt>Loki / Thanos</dt><dd>3 yrs</dd></div>
+        <div style="--y:1"><dt>SigNoz / OpenTelemetry</dt><dd>1 yr</dd></div>
+        <div style="--y:1"><dt>VictoriaMetrics stack</dt><dd>1 yr</dd></div>
+      </dl>
+      <p class="also">Also: Application Insights, ELK, Zabbix, Alertmanager</p>
+    </div>
+    <div class="skill-group">
+      <h3>Collaboration</h3>
+      <dl class="bars">
+        <div style="--y:13"><dt>Git &amp; GitHub</dt><dd>13 yrs</dd></div>
+        <div style="--y:13"><dt>Jira</dt><dd>13 yrs</dd></div>
+        <div style="--y:6"><dt>Azure DevOps</dt><dd>6 yrs</dd></div>
+        <div style="--y:1"><dt>Bitbucket</dt><dd>1 yr</dd></div>
+      </dl>
+      <p class="also">Also: SVN, TFS, Azure Boards</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="experience">
+  <h2 id="experience">Earlier projects</h2>
+  <p class="section-note">Consulting and delivery work, newest first. Open a project to see what I was responsible for.</p>
+
+  <ol class="history">
+    <li>
+      <details>
+        <summary><span class="h-dates">2026</span><span class="h-title">Performance testing for a Windows security product</span><span class="h-role">DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Built the environment for load testing a Windows security product that analyses and signs documents on the fly as users open them.</p>
+          <ul>
+            <li>Windows Server hosts on EC2 with access through SSM and RDP.</li>
+            <li>HAProxy and nginx in front, Prometheus and Grafana for metrics, supporting services in Docker Compose.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> AWS, EC2 Windows Server, SSM, HAProxy, nginx, Prometheus, Grafana, Docker Compose</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2025 – 2026</span><span class="h-title">AI-driven supplier threat intelligence and alert management</span><span class="h-role">DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>An AI-based Kubernetes application that collects and analyses security incidents across suppliers.</p>
+          <ul>
+            <li>Built and delivered the Azure infrastructure as code.</li>
+            <li>Owned build, release and deployment of the applications.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> Azure, Azure Pipelines, Terraform, Helm, Docker, FluxCD</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2025</span><span class="h-title">Deployment consulting</span><span class="h-role">Consultant, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Advised a client team on how to deploy and run their application.</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2024 – 2025</span><span class="h-title">AKS migration and security review</span><span class="h-role">Architect, DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Discovery, architecture and plan for moving a production AKS cluster and its registry to a new Azure subscription.</p>
+          <ul>
+            <li>Designed the target setup and a step-by-step cutover: service principals, image transfer, CI secrets, DNS switch.</li>
+            <li>Security and reliability review with prioritised fixes: secrets out of git into Key Vault, everything as code, HA for Redis and RabbitMQ, resource requests and limits, spot nodes for dev.</li>
+            <li>Proposed Helm and GitOps for application delivery and estimated the whole programme.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> Azure, AKS, ACR, Key Vault, Helm, Prometheus, Grafana, ingress-nginx, cert-manager</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023 – 2026</span><span class="h-title">Sports tech — app for the diving community</span><span class="h-role">Consultant, Lead DevOps, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>A social and competition platform for divers, parents, judges and coaches, on web and mobile.</p>
+          <ul>
+            <li>Led the DevOps engineers and made infrastructure decisions on scalability, security and cost.</li>
+            <li>Worked with developers on application architecture.</li>
+            <li>Troubleshot production incidents and set deployment and monitoring practices.</li>
+            <li>Stayed on for ongoing support in 2025–2026.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> GCP, GitHub, Kubernetes, Terraform, PostgreSQL</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023 – 2026</span><span class="h-title">Pre-sales architecture and estimates</span><span class="h-role">Architect, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Answered client requests for proposals with infrastructure designs, CI/CD plans and cost estimates.</p>
+          <ul>
+            <li>An AI product covering NLP and video and audio comprehension: infrastructure, CI/CD and MVP cost.</li>
+            <li>A smart mirror that lets shoppers try on clothes virtually: software and hardware architecture around a GPU and neural networks.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> Azure, AWS, Kubernetes, GitHub Actions</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023 – 2026</span><span class="h-title">Travel tech — .NET applications on Azure</span><span class="h-role">Consultant, DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Rescued and then supported the delivery of a travel company's .NET applications on Azure, across two of its products.</p>
+          <ul>
+            <li>Audited and fixed the CI/CD pipelines and planned the next improvements.</li>
+            <li>Set up and maintained Web Apps and Azure SQL, with automatic certificate renewal.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> Azure Web Apps, Azure SQL, .NET, MSBuild, Jenkins, GitHub</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023 – 2024</span><span class="h-title">Enterprise — secure microservices platform on Azure</span><span class="h-role">Lead DevSecOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>An urgent, security-first build of dev, test, pre-prod and prod environments on Azure, under least-privilege access.</p>
+          <ul>
+            <li>Refactored all Terraform and built the Azure DevOps pipelines and Dockerfiles.</li>
+            <li>Private AKS cluster in a hub-and-spoke network, with access locked down by port and IP.</li>
+            <li>Designed service-to-service communication and wrote the communication matrix.</li>
+            <li>Worked through the customer's security team for every access; documented the architecture and implementation.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> Azure, AKS, Azure DevOps, Terraform, Docker, Helm, Python</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2023</span><span class="h-title">Banking — AI document analysis</span><span class="h-role">DevOps Engineer, SoftTeco</span></summary>
+        <div class="h-body">
+          <p>Infrastructure for an AI tool that analyses bank documents automatically.</p>
+          <ul>
+            <li>Terraform for the cloud resources, Azure DevOps pipelines, Helm charts.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> Azure, Azure DevOps, Terraform, GitHub Actions, Kubernetes</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2022</span><span class="h-title">The Real Deal — real estate news portal redevelopment</span><span class="h-role">Lead DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>A multi-regional US real estate news portal rebuilt from the ground up. Team of four developers, an architect and me as the only DevOps engineer.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Architecture</h4>
+              <ul>
+                <li>Acted as solution architect for the new platform.</li>
+                <li>Designed a secure AWS infrastructure and a disaster recovery plan with a preliminary estimate.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Delivery</h4>
+              <ul>
+                <li>Infrastructure as code with Terraform, deployed into EKS.</li>
+                <li>CI/CD for the microservices with Docker, Helm and GitHub Actions; branching and versioning strategy.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Team</h4>
+              <ul>
+                <li>Guided developers on performance and security issues.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Stack</span> AWS, EKS, Terraform, Helm, Docker, GitHub Actions, Bash, WordPress</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2019 – 2022</span><span class="h-title">Wolters Kluwer — cloud resources at enterprise scale</span><span class="h-role">Lead DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>A DevOps practice of 10 to 20 engineers serving the internal departments of a large enterprise with many Azure subscriptions and AWS accounts.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Platform</h4>
+              <ul>
+                <li>Built and supported a container-as-a-service offering for internal customers.</li>
+                <li>Refactored the CI/CD pipeline for the move to the newest Windows Server version.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Configuration and hardening</h4>
+              <ul>
+                <li>A configuration and validation service for Azure VMs and EC2 instances on Ansible and AWX, driven through the Azure agent and AWS SSM, with custom Ansible plugins in Python.</li>
+                <li>CIS hardening automation for the whole fleet.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Tooling</h4>
+              <ul>
+                <li>Designed and ran a cloud inventory solution on Azure Automation and Azure Functions.</li>
+                <li>Designed the migration from Azure AD SSO to AWS SAML 2.0 SSO.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Leadership</h4>
+              <ul>
+                <li>Led teams of 2 to 4 engineers as scrum master and coordinator.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Stack</span> Azure DevOps, Terraform, ARM, CloudFormation, Kubernetes, Ansible, AWX, AWS SSM, Python, PowerShell, Bash, Azure Automation, Azure Functions, Logic Apps</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2021</span><span class="h-title">Instructure — education platform, Azure to AWS</span><span class="h-role">Senior DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>An educational platform for schools and universities that had to move from Azure to AWS.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Migration</h4>
+              <ul>
+                <li>Designed the migration strategy for the ASP.NET applications.</li>
+                <li>Moved the applications from Azure Web Apps to AWS Lightsail.</li>
+                <li>Moved the database from Azure SQL to Amazon RDS with AWS DMS.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Stack</span> Azure, AWS, Lightsail, RDS, DMS, MS SQL, Docker</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2020 – 2021</span><span class="h-title">Verint — enterprise feedback management</span><span class="h-role">DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>A feedback management platform whose legacy components kept failing to install.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Automation</h4>
+              <ul>
+                <li>Automated the CI/CD pipeline and the configuration of legacy software.</li>
+                <li>Moved application provisioning from PowerShell scripts to Ansible.</li>
+                <li>Tracked down the root causes of old installation failures.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Team</h4>
+              <ul>
+                <li>Supported the development team in daily work.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Stack</span> Octopus Deploy, Ansible, PowerShell, GitLab</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2019</span><span class="h-title">Exadel — AWS cost calculator</span><span class="h-role">Lead DevOps Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>An internal Exadel project: automated calculation of AWS costs.</p>
+          <p class="tools"><span>Stack</span> AWS, PowerShell</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2019</span><span class="h-title">Deloitte — Tax Tips</span><span class="h-role">CI/CD and Support Engineer, Exadel</span></summary>
+        <div class="h-body">
+          <p>An internal tax calculation application whose microservice delivery needed an update.</p>
+          <ul>
+            <li>Refactored the Docker deployment.</li>
+            <li>Automated work item updates in Azure DevOps.</li>
+            <li>Scheduled start and stop of VMs by resource group and tags to cut cost.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> Azure DevOps, Azure IaaS, Docker, PowerShell</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2015 – 2018</span><span class="h-title">Luxottica — digital asset management</span><span class="h-role">Support Team Lead, Technical Architect, EPAM</span></summary>
+        <div class="h-body">
+          <p>Luxottica's Content Lab and DAM, built on ADAM Software. Grew from coordinating a four-person support team into the stream's lead and technical architect.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Process</h4>
+              <ul>
+                <li>Built the support process from zero, following ITIL practices.</li>
+                <li>Reporting and Jira visibility for the customer and the team, with regular customer meetings.</li>
+                <li>Backlog reviews and onboarding of newcomers.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Engineering</h4>
+              <ul>
+                <li>Solution design as the stream's technical expert.</li>
+                <li>CI/CD and deployment improvements, infrastructure changes, bug fixing.</li>
+                <li>Developed the ADAM PowerShell module.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Support</h4>
+              <ul>
+                <li>Customer and internal support, root-cause analysis of problems.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Stack</span> MS SQL, Solr, Elasticsearch, TeamCity, PowerShell, Visual Studio, MSBuild, MSDeploy, Sonar, Application Insights, Azure IaaS, .NET</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2015</span><span class="h-title">McKesson — DAM deployment automation</span><span class="h-role">Engineer, EPAM</span></summary>
+        <div class="h-body">
+          <p>A digital asset management system on ADAM Software.</p>
+          <ul>
+            <li>Automated the whole product deployment from scratch.</li>
+            <li>One-touch deployment that updates Jira tickets and versions and emails release notes.</li>
+            <li>Automatic rollback.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> TeamCity, PowerShell, DSC, Web Deploy, Jira API, MS SQL 2012</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2008 – 2014</span><span class="h-title">Invention Machine, acquired by IHS — IT for an R&amp;D office</span><span class="h-role">Lead Engineer, System Administrator</span></summary>
+        <div class="h-body">
+          <p>Started as the sole administrator of a 60-person office of developers and testers running about 50 self-assembled desktops as servers. After IHS bought the company, I led the Minsk side of moving the office, by then 100 people, into IHS, with a team of network, support and phone engineers.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Infrastructure</h4>
+              <ul>
+                <li>Upgraded the Windows 2000 domain controllers and Exchange 2000 to 2007.</li>
+                <li>RIS and WDS for OS deployment; Forefront central antivirus in place of NOD32.</li>
+                <li>Built a new server room with a blade chassis and 3PAR storage.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Acquisition</h4>
+              <ul>
+                <li>Moved the office to the IHS domain: accounts, trusts, servers, workstations, user profiles and data.</li>
+                <li>Owned hardware design and procurement and the risk discussions for the Minsk office.</li>
+                <li>Integrated digital phones and conference rooms; audited the network of the expanded office and took part in the vendor choice.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Virtualization</h4>
+              <ul>
+                <li>Moved from VMware Workstation to Hyper-V with SCVMM 2008.</li>
+                <li>Later migrated nearly all VMs to vSphere; installed and ran vCenter, fixed storage connectivity to ESXi, set up PowerChute Network Shutdown.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Network</h4>
+              <ul>
+                <li>Ran the IPsec site-to-site link to the US office: Cisco ASA on one side, FreeBSD on the other.</li>
+                <li>Remote access through RRAS VPN and later Remote Desktop Gateway; brought up a new fibre link from the UK.</li>
+                <li>Monitoring with munin, mrtg and softflowd; rebuilt the server room network during an office move.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>QA tooling</h4>
+              <ul>
+                <li>Rewrote the web UI of the QA test framework: the main page now loads in 1–2 seconds instead of minutes or a timeout.</li>
+                <li>Cut the daily test report from 40 minutes – 4 hours down to 5–8 minutes across 20,000 tests.</li>
+                <li>Prepared dev and test environments, including PTC Windchill, EMC Documentum and Oracle.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Delivery</h4>
+              <ul>
+                <li>Introduced Chef for deploying the product on the production site, with a cookbook for the index node.</li>
+                <li>Built a web portal for the physical access system on Web API 2 and AngularJS.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Stack</span> Windows Server 2000–2012, AD, Exchange, WSUS, WDS, GPO, SharePoint, Hyper-V, SCVMM, vSphere, ESXi, 3PAR, FreeBSD, Chef, Ruby, C#, AngularJS, MS SQL, Oracle 10g, Paradox, PowerShell</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2008</span><span class="h-title">AlliedTesting — QA infrastructure</span><span class="h-role">System Administrator</span></summary>
+        <div class="h-body">
+          <p>One of two administrators in a 60-person testing office.</p>
+          <ul>
+            <li>Clean OS reinstalls for testers and regular software audits.</li>
+            <li>Automated installs with RIS, then upgraded to WDS with backward compatibility.</li>
+            <li>Proposed and started the move to virtualization.</li>
+          </ul>
+          <p class="tools"><span>Stack</span> Windows Server 2003, RIS, WDS</p>
+        </div>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><span class="h-dates">2001 – 2008</span><span class="h-title">N.N. Alexandrov National Cancer Center of Belarus</span><span class="h-role">Lead Engineer, System Administrator</span></summary>
+        <div class="h-body">
+          <p>Started as a technician and grew the center's IT from one server and 20 PCs to 4 servers and about 200 PCs.</p>
+          <div class="groups">
+            <div class="group">
+              <h4>Infrastructure</h4>
+              <ul>
+                <li>Replaced an ad-hoc network with Active Directory, DNS and DHCP.</li>
+                <li>Exchange as the mail server; a Squid proxy with AD authentication and traffic shaping.</li>
+                <li>Planned and cabled the network expansion.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Medical imaging</h4>
+              <ul>
+                <li>On the team that built a system storing X-ray images from every machine and serving them to any doctor's PC.</li>
+                <li>Found and adapted an open-source DICOM server and wrote its management UI.</li>
+                <li>Saved the center about $250,000 a year and let doctors see every image of a patient, not just the printed few.</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h4>Events</h4>
+              <ul>
+                <li>Ran the technical side of medical conferences, including the 3rd Congress of CIS Oncologists.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="tools"><span>Stack</span> Windows 2000 Server, AD, DNS, DHCP, Exchange 2000, FreeBSD, Squid, Apache, MS SQL 2000, C#</p>
+        </div>
+      </details>
+    </li>
+  </ol>
+</section>
+
+</main>
+
+<footer class="wrap" aria-labelledby="contact">
+  <h2 id="contact">Get in touch</h2>
+  <ul class="contacts">
+    <li><a href="mailto:sergey@krivopishin.by">sergey@krivopishin.by</a></li>
+    <li><a href="tel:+375257408543">+375 25 740-85-43</a></li>
+    <li><a href="https://t.me/skrivopishin">Telegram</a></li>
+    <li><a href="https://www.linkedin.com/in/sergey-krivopishin/">LinkedIn</a></li>
+    <li><a href="https://github.com/skrivopishin">GitHub</a></li>
+  </ul>
+  <p class="langs">English, full professional proficiency. German, limited working proficiency.</p>
+  <p class="langs">Bachelor, Belarusian State University of Informatics and Radioelectronics.</p>
+</footer>
+</body>
+</html>
